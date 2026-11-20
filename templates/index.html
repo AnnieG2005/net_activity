@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#162131">
+  <title>Router Console · Packet Tracer IOS Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="pt-shell">
+    <main class="page">
+      <header class="topbar" aria-label="Session status bar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">PT</span>
+          <span class="brand-text">
+            <strong>Router Console <span class="device-tag">2911 / IOS</span></strong>
+            <small>Cisco Packet Tracer · Telnet Diagnostic Workbench</small>
+          </span>
+        </div>
+        <div class="topbar-meta">
+          <span class="mode-pill" title="Privileged EXEC mode">Router# EXEC</span>
+          <span class="connection-label" id="connection-state">Ready to connect</span>
+        </div>
+      </header>
+
+      <!-- Packet Tracer Device Inspector Tabs -->
+      <nav class="pt-tabs" aria-label="Device inspection tabs">
+        <button class="pt-tab is-active" type="button" data-tab="cli" aria-selected="true">
+          <span class="tab-dot" aria-hidden="true"></span>
+          CLI Console
+        </button>
+        <button class="pt-tab" type="button" data-tab="physical" aria-selected="false">
+          Physical Ports
+        </button>
+        <button class="pt-tab" type="button" data-tab="session" aria-selected="false">
+          Session Info
+        </button>
+      </nav>
+
+      <!-- Tab 1: CLI Workbench (Default active) -->
+      <div class="tab-panel is-active" id="tab-cli">
+        <section class="intro pt-panel" aria-labelledby="page-title">
+          <div class="pt-titlebar">
+            <span class="pt-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="pt-titlebar-label">Router0 — Console &amp; Telnet Diagnostics</span>
+            <span class="pt-port-tag">TCP :23 · Up</span>
+          </div>
+          <div class="intro-body">
+            <div class="intro-main">
+              <p class="eyebrow">Cisco IOS Read-Only Audit</p>
+              <h1 id="page-title">Quick checks,<br>clear answers.</h1>
+              <p class="intro-copy">Execute read-only show commands against your lab router to verify IOS image details, interface link statuses, and the active running configuration.</p>
+            </div>
+            <aside class="device-strip" aria-label="Simulated router summary">
+              <div class="strip-row">
+                <span>Hostname</span>
+                <code>Router0</code>
+              </div>
+              <div class="strip-row">
+                <span>Privilege</span>
+                <code>Level 15 (#)</code>
+              </div>
+              <div class="strip-row">
+                <span>Transport</span>
+                <code>Telnet / VTY</code>
+              </div>
+              <div class="strip-row">
+                <span>Link LED</span>
+                <strong class="led-ok">● LINK UP</strong>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="pt-panel commands-panel" aria-labelledby="commands-title">
+          <div class="pt-titlebar">
+            <span class="pt-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="pt-titlebar-label" id="commands-title">CLI Command Queue</span>
+            <span class="section-note">3 commands queued</span>
+          </div>
+
+          <div class="command-list">
+            <div class="command">
+              <span class="command-number">01</span>
+              <div class="command-info">
+                <p>Check IOS software version, uptime, and hardware platform</p>
+                <code>show version</code>
+              </div>
+              <span class="cmd-badge">IOS</span>
+              <button class="copy-button" type="button" aria-label="Copy show version" data-copy="show version">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+              </button>
+            </div>
+            <div class="command">
+              <span class="command-number">02</span>
+              <div class="command-info">
+                <p>Review interface IP addresses, protocol status, and link state</p>
+                <code>show ip interface brief</code>
+              </div>
+              <span class="cmd-badge">IPv4</span>
+              <button class="copy-button" type="button" aria-label="Copy show ip interface brief" data-copy="show ip interface brief">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+              </button>
+            </div>
+            <div class="command">
+              <span class="command-number">03</span>
+              <div class="command-info">
+                <p>Inspect the active running configuration in RAM</p>
+                <code>show running-config</code>
+              </div>
+              <span class="cmd-badge">CFG</span>
+              <button class="copy-button" type="button" aria-label="Copy show running-config" data-copy="show running-config">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="actions">
+            <form id="run-form" action="/connect" method="post">
+              <button class="run-button" type="submit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m9 6 9 6-9 6V6Z" fill="currentColor" stroke="none"></path></svg>
+                <span class="run-label">Run all commands</span>
+              </button>
+            </form>
+            <span class="action-hint" id="run-status" aria-live="polite">Connects to the configured router and displays output below.</span>
+          </div>
+        </section>
+
+        <div class="notice" id="run-error" role="alert" hidden></div>
+
+        <section class="results pt-panel" id="results" aria-labelledby="results-title" hidden>
+          <div class="pt-titlebar results-heading">
+            <span class="pt-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <h2 id="results-title">Router# CLI Terminal Output</h2>
+            <div class="results-tools">
+              <span class="section-note">Latest session capture</span>
+              <button class="clear-button" id="clear-results" type="button">Clear</button>
+            </div>
+          </div>
+          <div id="result-list"></div>
+        </section>
+      </div>
+
+      <!-- Tab 2: Physical Ports Overview -->
+      <div class="tab-panel" id="tab-physical" hidden>
+        <section class="pt-panel">
+          <div class="pt-titlebar">
+            <span class="pt-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="pt-titlebar-label">Physical Chassis &amp; Interface LEDs</span>
+            <span class="pt-port-tag">Rack Slot 0</span>
+          </div>
+          <div class="chassis-body">
+            <p class="intro-copy">Typical Packet Tracer router interface layout. Run <code>show ip interface brief</code> on the CLI tab to confirm live status and assigned IP addresses.</p>
+            <div class="port-grid">
+              <div class="port-card">
+                <div class="port-top">
+                  <code>Gig0/0</code>
+                  <span class="port-led is-up" aria-hidden="true"></span>
+                </div>
+                <small>GigabitEthernet0/0 · WAN / Uplink</small>
+              </div>
+              <div class="port-card">
+                <div class="port-top">
+                  <code>Gig0/1</code>
+                  <span class="port-led is-up" aria-hidden="true"></span>
+                </div>
+                <small>GigabitEthernet0/1 · LAN Trunk / Access</small>
+              </div>
+              <div class="port-card">
+                <div class="port-top">
+                  <code>Console</code>
+                  <span class="port-led is-mgmt" aria-hidden="true"></span>
+                </div>
+                <small>RJ-45 Rollover · 9600 Baud</small>
+              </div>
+              <div class="port-card">
+                <div class="port-top">
+                  <code>AUX</code>
+                  <span class="port-led is-down" aria-hidden="true"></span>
+                </div>
+                <small>Auxiliary Port · Standby</small>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Tab 3: Session Info -->
+      <div class="tab-panel" id="tab-session" hidden>
+        <section class="pt-panel">
+          <div class="pt-titlebar">
+            <span class="pt-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="pt-titlebar-label">Backend Bridge &amp; Execution Notes</span>
+            <span class="pt-port-tag">Flask POST /connect</span>
+          </div>
+          <div class="chassis-body">
+            <p class="intro-copy">Submitting <strong>Run all commands</strong> sends a <code>POST</code> request to <code>/connect</code> on your Flask backend (<code>api.py</code>) and renders each command's output in a dedicated IOS terminal block.</p>
+            <div class="info-list">
+              <div><strong>Endpoint:</strong> <code>/connect</code></div>
+              <div><strong>Commands:</strong> <code>show version</code>, <code>show ip interface brief</code>, <code>show running-config</code></div>
+              <div><strong>Mode:</strong> Non-destructive read-only inspection</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <span>Cisco Packet Tracer Style Console <span aria-hidden="true">·</span> Network Lab Diagnostics</span>
+        <span class="footer-status">IOS CLI Ready</span>
+      </footer>
+    </main>
+  </div>
+  <script src="./script.js" defer></script>
+</body>
+</html>
